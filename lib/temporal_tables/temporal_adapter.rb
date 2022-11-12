@@ -181,7 +181,7 @@ module TemporalTables
 
     # It's important not to increase the length of the returned string.
     def temporal_index_name(index_name)
-      index_name.to_s.sub(/^index/, 'ind_h').sub(/_ix(\d+)$/, '_hi\1')
+      temporal_name(index_name)
     end
 
     def temporal_index_exists?(table_name, index_name)
